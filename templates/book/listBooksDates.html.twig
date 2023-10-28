@@ -1,0 +1,13 @@
+<h1>List of Books</h1>
+    <ul>
+    {% if books==[] %}
+    <p>empty</p>
+    {%endif %}
+        {% for book in books %}
+            <li>{{ book.title }} 
+            <li>{{ book.publicationDate|date('Y-m-d') }}</li>
+            <li>{{book.author.username}}</li>
+            
+            <br>
+        {% endfor %}
+    </ul>
